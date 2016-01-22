@@ -8,9 +8,9 @@ University of Washington Boundless themes for the [Framework](https://github.com
 
 ## Use
 
-These templates are for the [Framework](https://github.com/UWEnrollmentManagement/Framework) web framework. You must be using *Framework* to use these templates. If you have found this page but are not using *Framework*, you may instead be looking for the Boundless [WordPress templates](https://github.com/uweb/uw-2014) or the Boundless [web templates](https://www.washington.edu/brand/web/).
+These templates are for the [Framework](https://github.com/UWEnrollmentManagement/Framework) web framework. You must be using Framework to use these templates. If you have found this page but are not using Framework, you may instead be looking for the Boundless [WordPress templates](https://github.com/uweb/uw-2014) or the Boundless [web templates](https://www.washington.edu/brand/web/).
 
-The following steps are described in the *Framework* [application creation tutorial](https://github.com/UWEnrollmentManagement/Framework/blob/master/doc/application-creation.md). If you are new to *Framework*, you may wish to use that tutorial instead.
+The following steps are described in the Framework [application creation tutorial](https://github.com/UWEnrollmentManagement/Framework/blob/master/doc/application-creation.md). If you are new to Framework, you may wish to use that tutorial instead.
 
 1. Add Boundless to the package requirements in your `composer.json`:
 
@@ -31,7 +31,7 @@ The following steps are described in the *Framework* [application creation tutor
   Settings::addTemplateDirectory(dirname(__FILE__) ."/project-templates");
   ```
   
-That's it. Your *Framework* project is now on brand!
+That's it. Your Framework project is now on brand!
 
 
 ## License
