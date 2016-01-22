@@ -1,9 +1,9 @@
 # Boundless
 
-University of Washington `Boundless` themes for the [Framework](https://github.com/UWEnrollmentManagement/Framework) web framework.
+University of Washington Boundless themes for the [Framework](https://github.com/UWEnrollmentManagement/Framework) web framework.
 
-<br>
-![Boundless theme templates in action.](doc/assets/images/demo.png)
+
+![Boundless theme templates in action.](doc/assets/images/demo.png)<br>
 *Attractive, easy on-brand pages for* Framework *using these Boundless theme templates.*
 
 ## Use
