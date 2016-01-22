@@ -36,7 +36,7 @@ That's it. Your Framework project is now on brand!
 
 ## License
 
-Because this repository contains significant Unviersity of Washington trademark elements, it is NOT licensed for reuse by any party who is not licensed to present University of Washington trademark elements. See the University of Washington [Trademarks & Licensing group webpage](https://www.washington.edu/trademarks/) for more information.
+Because this repository contains significant Unviersity of Washington trademark elements, it is NOT licensed for reuse by any party who is not licensed to present University of Washington trademark elements. See the University of Washington [Trademarks & Licensing group](https://www.washington.edu/trademarks/) for more information.
 
 If you are a department or division of the University of Washington, please feel free to use Framework and these templates, conditioned upon your acceptance of the following statement:
 
