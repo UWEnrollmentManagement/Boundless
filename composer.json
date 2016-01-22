@@ -1,0 +1,7 @@
+{
+  "name": "uwdoem/boundless",
+  "description": "University of Washington `Boundless` themes for the Framework web framework.",
+  "require": {
+    "uwdoem/framework": "0.*"
+  }
+}
