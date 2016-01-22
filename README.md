@@ -17,10 +17,13 @@ The following steps are described in the *Framework* [application creation tutor
   ```
   "require": {
         ...
+        "uwdoem/framework": "0.*",
         "uwdoem/boundless": "0.*",
         ...
   },
   ```
+  
+  The major version number of `uwdoem/boundless` should be the same as your major version number of `uwdoem/framework`.
 
 2. Add the Boundless templates in your project's `setup.php`, **above** the line that adds your project-templates:
   ```
