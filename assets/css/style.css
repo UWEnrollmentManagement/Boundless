@@ -122,6 +122,12 @@ a.index-button {
     height:100px;
 }
 
+a.index-button p {
+    text-align:center;
+    color:white;
+    line-height:100px;
+}
+
 .internal-use-footer {
     background:none #4b2e83;
 }
