@@ -17,13 +17,13 @@ The following steps are described in the Framework [application creation tutoria
   ```
   "require": {
         ...
-        "uwdoem/framework": "0.*",
+        "athens/core": "0.*",
         "uwdoem/boundless": "0.*",
         ...
   },
   ```
   
-  The major version number of `uwdoem/boundless` should be the same as your major version number of `uwdoem/framework`.
+  The major version number of `uwdoem/boundless` should be the same as your major version number of `athens/core`.
 
 2. Add the Boundless templates in your project's `setup.php`, **above** the line that adds your project-templates:
   ```
