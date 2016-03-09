@@ -148,10 +148,15 @@ select.pagination-filter {
     background-color:#4b2e83
 }
 
-div.select-a-section-container div.option.header {
+div.select-a-section-container div.option {
     background-color: #e1caff;
-    color: black;
-    cursor:auto;
+    color: darkgray;
+}
+
+div.select-a-section-container div.option:not(.selected):not(.header):hover {
+    background-color: #eee4ff;
+    color: #555;
+    border-right-color:#EEE;
 }
 
 div.select-a-section-container div.section-label {
