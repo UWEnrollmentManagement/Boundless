@@ -181,10 +181,6 @@ h1, h2 {
     display:block;
 }
 
-
-
-
-
 .uw-breadcrumbs li:first-child:after {
     top: 12px;
 }
