@@ -190,5 +190,5 @@ h1, h2 {
 }
 
 .uw-breadcrumbs li:first-child a {
-    background: url(assets/svg/uw-sprite.svg) no-repeat -249px 0px;
+    background: url(../uw-brand/assets/svg/uw-sprite.svg) no-repeat -249px 0px;
 }
