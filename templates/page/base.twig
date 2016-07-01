@@ -24,51 +24,54 @@
     {% endblock metahead %}
 
     {% block head %}
-    <script type='text/javascript' src='vendor/uwdoem/boundless/assets/uw-brand/js/jquery.min.js'></script>
-    <script type='text/javascript' src='vendor/uwdoem/boundless/assets/uw-brand/js/underscore.min.js'></script>
-    <script type='text/javascript' src='vendor/uwdoem/boundless/assets/uw-brand/js/backbone.min.js'></script>
 
-    <script>
-        var uw = {"siteUrl": "../assets/"};
-    </script>
+        {% include "page/athens-css.twig" %}
 
-    <!--[if lt IE 9]>
-    <script src="vendor/uwdoem/boundless/assets/uw-brand/js/html5shiv.js" type="text/javascript"></script>
-    <script src="vendor/uwdoem/boundless/assets/uw-brand/js/respond.js" type="text/javascript"></script>
-    <script src="vendor/uwdoem/boundless/assets/uw-brand/js/site.js" type="text/javascript"></script>
-    <link rel='stylesheet' href='assets/uw-brand/css/ie.css' type='text/css' media='all'/>
-    <![endif]-->
+        <script type='text/javascript' src='vendor/uwdoem/boundless/assets/uw-brand/js/jquery.min.js'></script>
+        <script type='text/javascript' src='vendor/uwdoem/boundless/assets/uw-brand/js/underscore.min.js'></script>
+        <script type='text/javascript' src='vendor/uwdoem/boundless/assets/uw-brand/js/backbone.min.js'></script>
 
-    <link rel="stylesheet" href="vendor/uwdoem/boundless/assets/uw-brand/uw.css"/>
+        <script>
+            var uw = {"siteUrl": "../assets/"};
+        </script>
 
-    {% include "page/library-js.twig" %}
+        <!--[if lt IE 9]>
+        <script src="vendor/uwdoem/boundless/assets/uw-brand/js/html5shiv.js" type="text/javascript"></script>
+        <script src="vendor/uwdoem/boundless/assets/uw-brand/js/respond.js" type="text/javascript"></script>
+        <script src="vendor/uwdoem/boundless/assets/uw-brand/js/site.js" type="text/javascript"></script>
+        <link rel='stylesheet' href='assets/uw-brand/css/ie.css' type='text/css' media='all'/>
+        <![endif]-->
 
-    <link rel="stylesheet" href="vendor/uwdoem/boundless/assets/uw-brand/wp-style.css"/>
+        <link rel="stylesheet" href="vendor/uwdoem/boundless/assets/uw-brand/uw.css"/>
 
-    <!--File uw.css breaks the small header; this statement fixes it.-->
-    <style media="screen" type="text/css">
-        .uw-thinstrip nav {
-            display: inline;
-        }
+        {% include "page/athens-js.twig" %}
 
-        .uw-thinstrip div nav {
-            display: inline-block;
-        }
-    </style>
+        <link rel="stylesheet" href="vendor/uwdoem/boundless/assets/uw-brand/wp-style.css"/>
 
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/chosen/1.1.0/chosen.css"/>
-    <script type='text/javascript' src='//cdnjs.cloudflare.com/ajax/libs/chosen/1.1.0/chosen.jquery.js'></script>
+        <!--File uw.css breaks the small header; this statement fixes it.-->
+        <style media="screen" type="text/css">
+            .uw-thinstrip nav {
+                display: inline;
+            }
 
-    <link rel="stylesheet" href="vendor/athens/core/assets/css/web.css">
-    <link rel="stylesheet" href="vendor/athens/core/assets/css/print.css">
+            .uw-thinstrip div nav {
+                display: inline-block;
+            }
+        </style>
 
-    <link rel="stylesheet" href="vendor/uwdoem/boundless/assets/css/style.css"/>
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/chosen/1.1.0/chosen.css"/>
+        <script type='text/javascript' src='//cdnjs.cloudflare.com/ajax/libs/chosen/1.1.0/chosen.jquery.js'></script>
+
+        <link rel="stylesheet" href="vendor/athens/core/assets/css/web.css">
+        <link rel="stylesheet" href="vendor/athens/core/assets/css/print.css">
+
+        <link rel="stylesheet" href="vendor/uwdoem/boundless/assets/css/style.css"/>
     {% endblock head %}
 
     {% block project_head %}
 
         {% for cssFile in projectCSS %}
-    <link rel="stylesheet" href="{{ cssFile }}">
+        <link rel="stylesheet" href="{{ cssFile }}">
         {% endfor %}
 
         {% for jsFile in projectJS %}
