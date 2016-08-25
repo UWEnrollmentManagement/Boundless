@@ -9,17 +9,17 @@
 <html class="no-js"> <!--<![endif]-->
 <head>
     {% block metahead %}
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>
-        {{ title }}
-    </title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>
+            {{ title }}
+        </title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <base href="{{ baseHref }}" target="_blank">
+        <base href="{{ baseHref }}" target="_self">
 
-    <link rel='shortcut icon' type='image/x-icon' href='vendor/uwdoem/boundless/assets/uw-brand/img/favicon.ico'/>
+        <link rel='shortcut icon' type='image/x-icon' href='vendor/uwdoem/boundless/assets/uw-brand/img/favicon.ico'/>
 
     {% endblock metahead %}
 
@@ -71,7 +71,7 @@
     {% block project_head %}
 
         {% for cssFile in projectCSS %}
-        <link rel="stylesheet" href="{{ cssFile }}">
+    <link rel="stylesheet" href="{{ cssFile }}">
         {% endfor %}
 
         {% for jsFile in projectJS %}
@@ -83,81 +83,42 @@
 <body id="{{ id }}" class="{{ pageType }} {{ classes|join(' ') }}">
 {% block body %}
 
-<div class="loading-gif hidden"></div>
+    <div class="loading-gif hidden"></div>
 
-<div id="mask-screen">
+    <div id="mask-screen">
 
-    <div class="search-div">
-        <div class="section-label">Search Criteria</div>
-        <div id="search-criteria-area"></div>
+        <div class="search-div">
+            <div class="section-label">Search Criteria</div>
+            <div id="search-criteria-area"></div>
+        </div>
+
     </div>
 
-</div>
+    <div id='uwsearcharea' aria-hidden="true" class="uw-search-bar-container"></div>
 
-<div id='uwsearcharea' aria-hidden="true" class="uw-search-bar-container"></div>
+    <div id="uw-container">
 
-<div id="uw-container">
+        <div id="uw-container-inner">
+            {% block navheader %}{% endblock navheader %}
+            <div id="notification-area">
 
-    <div id="uw-container-inner">
-        {% block navheader %}{% endblock navheader %}
-        <div id="notification-area">
+            </div>
 
-        </div>
-        <div class="breadcrumbs-container">
-
-            {% if breadCrumbs %}
-
-                <nav class='uw-breadcrumbs' role='navigation' aria-label='breadcrumbs'><ul>
-                    <li><a target='_self' href='http://uw.edu' title='University of Washington'>Home</a></li>
-
-                {% for crumbKey, crumbValue in breadCrumbs %}
-                    {% if not loop.last %}
-                        <li><a target="_self" href="{{ crumbValue }}">{{ crumbKey }}</a></li>
-                    {% else %}
-                        <li class="current"><span>{{ crumbValue }}</span></li>
-                    {% endif %}
+            {% block content %}
+                {% for writable in writables  %}
+                    {{ writable|write|raw }}
                 {% endfor %}
+            {% endblock content %}
 
-                </ul></nav>
-            {% endif %}
 
-            {% if returnTo %}
-                {% for key, value in returnTo %}
-                <div class="uwaa-btn-wrapper">
-                    <a class="uwaa-btn btn-slant-left btn-purple" target="_self" href="{{ value }}" >&#8678; {{ key }}</a>
-                </div>
-                {% endfor %}
-            {% endif %}
+
+            <br class="footer-break">
+
+            {% block footer %}{% endblock footer %}
         </div>
-    <div id="page-content">
-
-    {% if header %}
-        <h1 class=header>{{ header }}</h1>
-    {% endif %}
-
-    <div id=top-filters>
     </div>
 
-    <br style="line-height:0;clear:both">
-
-    {% if subHeader %}
-        <h2 class=subheader>{{ subHeader }}</h2>
-    {% endif %}
-
-    <br class="page-content-head">
-
-    {% block content %}
-    {{ content|raw }}
-    {% endblock content %}
-
-</div>
-
-<br class="footer-break">
-</div>
-
-{% block footer %}{% endblock footer %}
-
-</div>
+    </div>
 {% endblock body %}
 </body>
 </html>
