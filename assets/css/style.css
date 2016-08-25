@@ -115,7 +115,7 @@ span.sort-text {
 
 a.index-button {
     display:inline-block;
-    margin:10px;
+    margin: 10px 10px 10px 0;
     background-color:#4b2e83;
     border-radius:7px;
     color:white;
@@ -123,7 +123,7 @@ a.index-button {
     height:100px;
 }
 
-a.index-button p {
+a.index-button {
     text-align:center;
     color:white;
     line-height:100px;
@@ -182,10 +182,14 @@ h1, h2 {
     display:block;
 }
 
-.uw-breadcrumbs li:first-child:after {
+.breadcrumbs li:first-child:after {
     top: 12px;
 }
 
-.uw-breadcrumbs li:first-child a {
+.breadcrumbs li:first-child a {
     background: url(../uw-brand/assets/svg/uw-sprite.svg) no-repeat -249px 0px;
+}
+
+.breadcrumbs li:last-child:after {
+    background: none;
 }
