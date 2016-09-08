@@ -262,3 +262,7 @@ input.btn.form-action:active, button.form-action.btn:active {
 div.note-editable.panel-body {
     min-height:200px;
 }
+
+span.choice {
+    margin-right: 20px;
+}
