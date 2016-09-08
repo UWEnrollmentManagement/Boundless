@@ -182,14 +182,82 @@ h1, h2 {
     display:block;
 }
 
-.breadcrumbs li:first-child:after {
-    top: 12px;
-}
-
 .breadcrumbs li:first-child a {
-    background: url(../uw-brand/assets/svg/uw-sprite.svg) no-repeat -249px 0px;
+    background: url(../uw-brand/assets/svg/uw-sprite.svg) no-repeat -249px 1px;
 }
 
 .breadcrumbs li:last-child:after {
     background: none;
+}
+
+#page-container {
+    padding-left:0;
+}
+
+.page-width {
+    margin:auto;
+}
+
+@media only screen and (min-width : 768px) {
+    .page-width {
+        width:95%;
+    }
+}
+
+@media only screen and (min-width : 992px) {
+
+    .page-width {
+        width:75%;
+    }
+
+    form.inline-fields label {
+        width:25%;
+    }
+
+    form.inline-fields input[type=text],
+    form.inline-fields div.form-group[data-field-type-for="multiple-choice"] span.form-control {
+        width:70%;
+        display:inline-block
+    }
+
+    form.inline-fields select {
+        width:initial;
+        min-width:30%;
+        display:inline-block;
+    }
+}
+
+@media only screen and (min-width : 1200px) {
+    .page-width {
+        width:65%;
+    }
+}
+
+
+
+
+.btn-default, .btn-default:active {
+    background-color: #4b2e83 !important;
+    color:white !important;
+}
+
+.btn-default:hover {
+    background-color: #31296e !important;
+}
+
+i.note-icon-font.note-recent-color {
+    background-color:transparent !important;
+    color: yellow;
+}
+
+input.form-action.btn, button.form-action.btn {
+    font-size:17px;
+    box-shadow: 2px 2px gray;
+    border:none;
+}
+
+input.btn.form-action:active, button.form-action.btn:active {
+    margin-left:2px;
+    margin-top:2px;
+    box-shadow:none;
 }

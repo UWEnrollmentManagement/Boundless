@@ -27,7 +27,27 @@
 
         {% include "page/athens-css.twig" %}
 
-        <script type='text/javascript' src='vendor/uwdoem/boundless/assets/uw-brand/js/jquery.min.js'></script>
+        {% include "page/athens-js.twig" %}
+
+        <!--Bootstrap-->
+        <link rel="stylesheet" href="vendor/uwdoem/boundless/assets/css/bootstrap.min.css">
+        <script src="vendor/uwdoem/boundless/assets/js/bootstrap.min.js"></script>
+
+        <!--Summernote-->
+        <link rel="stylesheet" href="vendor/uwdoem/boundless/assets/css/summernote.css">
+        <script src="vendor/uwdoem/boundless/assets/js/summernote.min.js"></script>
+
+        <!--Chosen.js-->
+        <link rel="stylesheet" href="vendor/uwdoem/boundless/assets/css/chosen.min.css">
+        <script src="vendor/uwdoem/boundless/assets/js/chosen.jquery.min.js"></script>
+
+        <!--bootstrap-notify-->
+        <link rel="stylesheet" href="vendor/uwdoem/boundless/assets/css/animate.css">
+        <script src="vendor/uwdoem/boundless/assets/js/bootstrap-notify.min.js"></script>
+
+        <!--Override athens.alert to use bootstrap-notify-->
+        <script src="vendor/uwdoem/boundless/assets/js/alert.js"></script>
+
         <script type='text/javascript' src='vendor/uwdoem/boundless/assets/uw-brand/js/underscore.min.js'></script>
         <script type='text/javascript' src='vendor/uwdoem/boundless/assets/uw-brand/js/backbone.min.js'></script>
 
@@ -43,9 +63,6 @@
         <![endif]-->
 
         <link rel="stylesheet" href="vendor/uwdoem/boundless/assets/uw-brand/uw.css"/>
-
-        {% include "page/athens-js.twig" %}
-
         <link rel="stylesheet" href="vendor/uwdoem/boundless/assets/uw-brand/wp-style.css"/>
 
         <!--File uw.css breaks the small header; this statement fixes it.-->
@@ -58,12 +75,6 @@
                 display: inline-block;
             }
         </style>
-
-        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/chosen/1.1.0/chosen.css"/>
-        <script type='text/javascript' src='//cdnjs.cloudflare.com/ajax/libs/chosen/1.1.0/chosen.jquery.js'></script>
-
-        <link rel="stylesheet" href="vendor/athens/core/assets/css/web.css">
-        <link rel="stylesheet" href="vendor/athens/core/assets/css/print.css">
 
         <link rel="stylesheet" href="vendor/uwdoem/boundless/assets/css/style.css"/>
     {% endblock head %}
@@ -104,13 +115,15 @@
 
             </div>
 
-            {% block content %}
-                {% for writable in writables  %}
-                    {{ writable|write|raw }}
-                {% endfor %}
-            {% endblock content %}
+            <div id="page-container" class="container page-width">
 
+                {% block content %}
+                    {% for writable in writables  %}
+                        {{ writable|write|raw }}
+                    {% endfor %}
+                {% endblock content %}
 
+            </div>
 
             <br class="footer-break">
 
@@ -120,5 +133,15 @@
 
     </div>
 {% endblock body %}
+<script type='text/javascript'>
+    $('textarea.html').summernote();
+    $('select').chosen();
+
+    athens.ajax_section.registerPostSectionAction(function() {
+        $('textarea.html').summernote();
+        $('select').chosen();
+    });
+
+</script>
 </body>
 </html>
