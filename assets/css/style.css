@@ -210,17 +210,17 @@ h1, h2 {
         width:75%;
     }
 
-    form.inline-fields label {
+    .inline-fields label {
         width:25%;
     }
 
-    form.inline-fields input[type=text],
-    form.inline-fields div.form-group[data-field-type-for="multiple-choice"] span.form-control {
+    .inline-fields input[type=text],
+    .inline-fields div.form-group[data-field-type-for="multiple-choice"] span.form-control {
         width:70%;
         display:inline-block
     }
 
-    form.inline-fields select {
+    .inline-fields select {
         width:initial;
         min-width:30%;
         display:inline-block;
@@ -251,11 +251,12 @@ input.form-action.btn, button.form-action.btn {
     font-size:17px;
     box-shadow: 2px 2px gray;
     border:none;
+    position:relative;
 }
 
 input.btn.form-action:active, button.form-action.btn:active {
-    margin-left:2px;
-    margin-top:2px;
+    left:2px;
+    top:2px;
     box-shadow:none;
 }
 
@@ -265,4 +266,40 @@ div.note-editable.panel-body {
 
 span.choice {
     margin-right: 20px;
+}
+
+form.inline div {
+    display:inline-block;
+}
+
+form.inline .form-group {
+    margin-bottom: 0px;
+}
+
+form.inline select.form-control {
+    height: 35px;
+}
+
+.form-control {
+    color: #2a2a2a;
+}
+
+textarea.form-control {
+    margin-bottom:5px;
+}
+
+.chosen-container-multi .chosen-choices {
+    line-height: 17px;
+    font-size: 17px;
+    min-height: 35px;
+    border-radius: 5px;
+    padding-top:3px;
+}
+
+ul.chosen-results li.result-selected {
+    font-size: 17px;
+}
+
+input[type=file] {
+    display: inline-block;
 }

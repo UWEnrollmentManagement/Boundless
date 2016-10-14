@@ -135,11 +135,11 @@
 {% endblock body %}
 <script type='text/javascript'>
     $('textarea.html').summernote();
-    $('select').chosen();
+    $('.chosen select, select.chosen').chosen();
 
     athens.ajax_section.registerPostSectionAction(function() {
         $('textarea.html').summernote();
-        $('select').chosen();
+        $('.chosen select, select.chosen').chosen();
     });
 
 </script>
